@@ -14,6 +14,6 @@
     <span *ngIf="temp>0; else tempSotto">
    {{i+1}} - {{temp}} <button (click)="delElement(i)">del</button>
     </span>
-    <ng-template #tempSotto>{{temp}}</ng-template>
+    <ng-template #tempSotto><b>{{temp}}</b></ng-template>
 </li>
 </div>
