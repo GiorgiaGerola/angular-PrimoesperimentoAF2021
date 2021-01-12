@@ -1,0 +1,19 @@
+<hello [ciao]="name"></hello>
+<p>
+  Freddo
+  {{gradi}}
+</p>
+<input type="text" [(ngModel)]="gradi">
+<button (click)="Add()"> Add </button>>
+
+<div *ngIf="temperature.length>0;">
+  <hr>
+  <h2> Elenco temperature</h2>
+  <li *ngFor="let temp of temperature; let i=index">
+
+    <span *ngIf="temp>0; else tempSotto">
+   {{i+1}} - {{temp}} <button (click)="delElement(i)">del</button>
+    </span>
+    <ng-template #tempSotto>{{temp}}</ng-template>
+</li>
+</div>
